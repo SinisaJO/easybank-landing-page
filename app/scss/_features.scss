@@ -1,0 +1,77 @@
+.features {
+    background-color: $light-Grayish-Blue;
+    padding-bottom: 4rem;
+    p {
+        margin-bottom: 3rem;
+    }
+    &__features-div {
+        text-align: center;
+        padding-top: 3.625rem;
+
+        h2 {
+            font-size: 1.875rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            color: $dark-Blue;
+            font-weight: 400;
+
+            @include breakpoint-up(large){
+                font-size: 2.05rem;
+            }
+        }
+
+        p {
+            font-size: 0.925rem;
+            max-width: 34.375rem;
+            @include breakpoint-up(medium){
+                font-size: 0.95rem;
+            }
+        }
+
+        @include breakpoint-up(medium) {
+            text-align: left;
+            
+            h2 {
+                padding-left: 0;
+            }
+        }
+    }
+    &__card {
+        
+        @include breakpoint-up(medium) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+    } 
+    &__card-box {
+        padding-top: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            flex: 0 0 50%;
+            padding: 1.7rem;
+        }
+        @include breakpoint-up(large) {
+            flex: 1;
+            padding: 0 .7rem 0 0;
+        }
+    }
+    &__card-title {
+        color: $dark-Blue;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-top: 2rem;
+        @include breakpoint-up(medium){
+            font-size: 1.5rem;
+        }
+    }
+
+    &__card-txt {
+        padding-top: 1.2rem;
+        font-size: 0.9rem;
+
+        @include breakpoint-up(medium){
+            font-size: 1rem;
+        }
+    }      
+}

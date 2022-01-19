@@ -1,0 +1,104 @@
+.intro {
+
+    background-color: $very-Light-Gray;
+
+    .container {
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    
+
+    &__img {
+        position: relative;
+        background-image: url(/images/bg-intro-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        min-height: 17.5rem;
+        
+        @include breakpoint-up(medium){
+            min-height: 400px;
+        }
+
+        @include breakpoint-up(large){
+            flex: 3;
+            order: 2;
+            height: 41rem;
+            background-image: none;
+            //background-image: url(/images/bg-intro-desktop.svg);
+            background-position: left center;
+        }
+
+        &::before {
+
+
+            @include breakpoint-up(large){
+                content: "";
+                position: absolute;
+                height: 120%;
+                background-image: url(/images/bg-intro-desktop.svg);
+                width: 154%;
+                background-size: 122%;
+                background-position: 0% 133%;
+                background-repeat: no-repeat;
+            }
+        }
+            
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(/images/image-mockups.png);
+            background-size: 86%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            
+            @include breakpoint-up(medium){
+                background-size: 62%;
+            }
+            
+            @include breakpoint-up(large){
+                height: 120%;
+                width: 122%;
+                background-size: 92%;
+                background-position: center 133%;
+                left: 28%;
+            }
+        }
+
+        
+    }
+
+    &__txt {
+        text-align: center;
+
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+
+        h1 {
+            line-height: 1.155;
+            font-size: 2.315rem;
+            font-weight: 300;
+            color: $dark-Blue;
+            margin-bottom: 1.5rem;
+
+            @include breakpoint-up(large){
+                font-size: $font-xlrg;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+            font-size: .9rem;
+        }
+    }
+}
